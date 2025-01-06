@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epiphany Pulse Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+           
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .about-section {
+            background-color: #e8f0f2; /* Light blue background */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+        .about-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333; /* Darker color for the heading */
+        }
+        .about-section p {
+            font-size: 1rem;
+            color: #555;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .product-section {
+            margin-bottom: 50px;
+            font-size: 1.3rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .product-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .category {
+            margin-bottom: 40px;
+        }
+        .category h3 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .product {
+            background: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            max-width: 200px;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product h3 {
+            margin: 10px 0;
+        }
+        .product p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .services-section {
+    background-color: #fce1e1; /* Light red/pink background */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+.services-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-decoration: underline; /* Underline the heading */
+    color: #333; /* Darker color for the heading */
+}
+.services-section p {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.service {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+.service p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact-section {
+    background-color: #e8f5e9; /* Light green background */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+.contact-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-decoration: underline; /* Underline the heading */
+    color: #333; /* Darker color for the heading */
+}
+.contact-section p {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.contact-list li {
+    font-size: 1.1rem;
+}
+.contact-list a {
+    text-decoration: none;
+    color: #007BFF; /* Link color */
+    transition: color 0.3s ease;
+}
+.contact-list a:hover {
+    color: #0056b3; /* Darker blue for hover */
+}
+
+        footer {
+  background-color: #333; /* Dark background color for the footer */
+  color: #fff; /* White text for contrast */
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+ text-underline-position: auto;
+}
+footer p {
+  margin: auto;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Epiphany Pulse Hub</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="about-section" id="about">
+            <h2>About Epiphany Pulse Hub</h2>
+            <p>
+                Epiphany Pulse Hub is a dynamic company offering high-quality building and construction materials, including plumbing supplies, tiles, paint, and home accessories. We are dedicated to providing our customers with the best products to meet their construction needs. Our goal is to create an exceptional customer experience with a focus on reliability, professionalism, and quality. Whether you’re a contractor or a homeowner, Epiphany Pulse Hub is your trusted partner for all your building material requirements.
+            </p>
+        </section>
+    </div>
+
+    <div class="container">
+        <section id="products" class="product-section">
+            <h2>Our Products</h2>
+
+            <!-- Cement -->
+            <div class="category">
+                <h3>Cement</h3>
+                <div class="products">
+                    <div class="product">
+                        <img src="https://www.ghacem.com/sites/default/files/2023-11/Screenshot%202023-11-10%20at%205.50.54%E2%80%AFPM.png" alt="Ghacem Cement">
+                        <h3>Ghacem</h3>
+                        <p>Durable and high-quality cement for all your construction needs.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN1Q32RCAld1ilusca1POXzSYTIfDxxe9VYA&s" alt="Diamond Cement">
+                        <h3>Diamond</h3>
+                        <p>Reliable cement for strong and lasting structures.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://i0.wp.com/greenviewsresidential.com/wp-content/uploads/2022/05/dangote.png?resize=768%2C416&ssl=1
+                        " alt="Dangote Cement">
+                        <h3>Dangote</h3>
+                        <p>Top-notch cement for all your building needs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Steel -->
+            <div class="category">
+                <h3>Steel</h3>
+                <div class="products">
+                    <div class="product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfcCZs-s1Ltv72ZbF_GdzfIjGU0hQYg02vwg&s" alt="Iron Rod">
+                        <h3>Iron Rod</h3>
+                        <p>High-strength iron rods for reinforced construction.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://p.globalsources.com/IMAGES/PDT/B5933604555/deformed-iron-rods.jpg" alt="Binding Wire">
+                        <h3>Binding Wire</h3>
+                        <p>Essential binding wire for construction projects.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://media.istockphoto.com/id/652240904/photo/different-metal-products-stainless-steel-profiles-and-tubes.jpg?s=612x612&w=0&k=20&c=Z6YrvtflsSKS5c1lrc-CIRdCg4lBhpSMfkpNVeWEVPA=" alt="Other Steels">
+                        <h3>Other Steels</h3>
+                        <p>Various steel products for versatile applications.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wood -->
+            <div class="category">
+                <h3>Wood</h3>
+                <div class="products">
+                    <div class="product">
+                        <img src="https://www.ilearnengineering.com/wp-content/uploads/2023/06/1440x900-02-11-1024x640-1.jpg" alt="Timber">
+                        <h3>Timber</h3>
+                        <p>Premium timber for furniture and construction.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://static.asianpaints.com/content/dam/asian_paints/blog/colour-combination/types-of-wood-for-furniture/natural-look-wood-furniture.jpg" alt="Plywood">
+                        <h3>Chacate Preto,Zebra wood</h3>
+                        <p>Various wood options for diverse projects.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://media.diy.com/is/image/KingfisherDigital/af90d8b2bbe6a3011bfa1db2693813dabe18356f?$WCMS_NPI_FW_S$" alt="Other Wood">
+                        <h3>Plywood</h3>
+                        <p>High-quality plywood for durable designs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plumbing Materials -->
+            <div class="category">
+                <h3>Plumbing Materials</h3>
+                <h4>Pipes</h4>
+                <div class="products">
+                    <div class="product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc5NUiSxaoRqrTcr4IKtIPt6Cl9imT1Yt6Rw&s" alt="Alcatel Pipes">
+                        <h3>Alcatel Pipes</h3>
+                        <p>Durable pipes for plumbing systems.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://pictures-ghana.jijistatic.net/32694092_MzAwLTM2OS1kMmYxYjllODNhLTE.webp" alt="Conduit Pipes">
+                        <h3>Conduit Pipes</h3>
+                        <p>Reliable pipes for electrical installations.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://youmats-media.s3.me-central-1.amazonaws.com/97821/conversions/pipes-al-rajhi-upvc-size_500_500.webp" alt="PVC Pipes">
+                        <h3>PVC Pipes</h3>
+                        <p>Flexible and strong pipes for various uses.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://ik.imagekit.io/fepy/cdn/catalog/product/u/n/untitled111_2.png" alt="PPR Pipes">
+                        <h3>PPR Pipes</h3>
+                        <p>Advanced pipes for modern plumbing.</p>
+                    </div>
+                </div>
+
+                <h4>Pipe Fittings</h4>
+                <div class="products">
+                    <div class="product">
+                        <img src="https://i.pinimg.com/736x/6e/49/f7/6e49f7872d5c2aceec8cf04da8f488b4.jpg" alt="PPR Fittings">
+                        <h3>PPR Fittings</h3>
+                        <p>High-quality PPR fittings for secure connections.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://image.made-in-china.com/226f3j00pMAWBSusLngt/Plastic-Saddle-Clamps-and-Repair-Clamp-PVC-Pipe-Fitting-for-Water-Supply.webp" alt="PVC Fittings">
+                        <h3>PVC Fittings</h3>
+                        <p>Durable PVC fittings for reliable plumbing.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://3.imimg.com/data3/HR/YT/MY-9701536/brass-fittings-1000x1000.jpg" alt="Copper Fittings">
+                        <h3>Copper Fittings</h3>
+                        <p>Top-notch copper fittings for long-lasting performance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tiles and Flooring -->
+            <div class="category">
+                <h3>Tiles and Flooring</h3>
+                <div class="products">
+                    <div class="product">
+                        <img src="https://housing.com/news/wp-content/uploads/2023/03/Ceramic-tiles-Properties-types-advantages-disadvantages-and-uses-f-686x400.jpg" alt="Ceramic Tiles">
+                        <h3>Ceramic Tiles</h3>
+                        <p>Elegant ceramic tiles for modern interiors.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://img.freepik.com/premium-photo/marble-tiles-flooring-design_956414-3218.jpg" alt="Marble">
+                        <h3>Marble</h3>
+                        <p>Luxurious marble tiles for premium designs.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_vwARuGlsL7OqFpzu-AXNc-vlSDUXG24i2g&s
+                        " alt="Hardwood Flooring">
+                        <h3>Hardwood Flooring</h3>
+                        <p>Stunning hardwood flooring for elegant spaces.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- High Quality Paints -->
+            <div class="category">
+                <h3>High Quality Paints</h3>
+                <div class="products">
+                    <div class="product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmuQiyXIO-4mtQHEsUuCZXcYp_aVaROxCBsw&s" alt="De-luxy Paint">
+                        <h3>De-luxy Paint</h3>
+                        <p>Premium paint for vibrant interiors and exteriors.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQceZnJynQFgsTcOInUKxjfnVV80CNtHTXdgg&s" alt="Azar Paint">
+                        <h3>Azar Paint</h3>
+                        <p>High-quality paint for a flawless finish.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqJ_-6wK4z7wrqSXeYYRfF036qrOWMkiS98w&s" alt="HomeCharm Paint">
+                        <h3>HomeCharm Paint</h3>
+                        <p>Durable paint for all types of surfaces.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEmbQvEjDGsvBiCl4eEUvFtrpg0Uq6X3Lx2w&s
+                        " alt="LeyLand Paint">
+                        <h3>LeyLand Paint</h3>
+                        <p>Excellent paint for creative designs.</p>
+                    </div>
+                </div>
+            </div>
+
+            
+          <!-- Home Accessories -->
+            <div class="category">
+                <h3>Home Accessories</h3>
+
+                <h4>Lighting</h4>
+                <div class="products">
+                    <div class="product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Azno7MNESTkljBa967_80Lyn9sycoVA18g&s" alt="Chandelier">
+                        <h3>Chandelier</h3>
+                        <p>Elegant chandeliers to illuminate your space.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/71gPhhg4-0L._AC_SL1500_.jpg" alt="Outdoor Light">
+                        <h3>Outdoor Light</h3>
+                        <p>Durable and weatherproof outdoor lighting solutions.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk5va8KCH9jucoRWe1v6WW6VsvsYLnf7htnA&s" alt="Ceiling Light">
+                        <h3>Ceiling Light</h3>
+                        <p>Modern ceiling lights for your interiors.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/61xxhaeUKIL._AC_UF894,1000_QL80_.jpg
+                        " alt="Bedside Lamp">
+                        <h3>Bedside Lamp</h3>
+                        <p>Stylish bedside lamps for your comfort.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://www.ikea.com/us/en/images/products/isnalen-led-work-lamp-red-brass-color__1053465_pe847031_s5.jpg
+                        " alt="Study Lamp">
+                        <h3>Study Lamp</h3>
+                        <p>Focused lighting for productive study sessions.</p>
+                    </div>
+                </div>
+
+                <h4>Faucets</h4>
+                <div class="products">
+                    <div class="product">
+                        <img src="https://m.media-amazon.com/images/I/51osNwrcEsL._AC_UF1000,1000_QL80_.jpg" alt="Sink Tap">
+                        <h3>Sink Tap</h3>
+                        <p>Modern sink taps for kitchens and bathrooms.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://images-cdn.ubuy.co.in/633b3e5f690deb7b3a56ce5f-all-metal-shower-faucet-set-dual-square.jpg" alt="Shower">
+                        <h3>Shower</h3>
+                        <p>High-quality showers for a luxurious experience.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://www.kimogroup.com/cdn/shop/files/Groove_Aqua_Basin_Mixer_8f9591fc-54d4-4011-93f9-87eba8f2473c.png?v=1715860925&width=1000" alt="Basin Tap">
+                        <h3>Basin Tap</h3>
+                        <p>Elegant basin taps for your bathrooms.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doors -->
+            <div class="category">
+                <h3>Doors</h3>
+                <div class="products">
+                    <div class="product">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhmujZFRNqgySzLOgB2mBAXbjk9QXBQNKeVw&s
+                        " alt="Door Model 1">
+                        <h3>WPC Doors</h3>
+                        <p>Premium doors for secure and stylish homes.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://www.homeimprovementanddecor.com/wp-content/uploads/2023/04/Panel-Doors-Types-Of-Panel-Doors.jpg" alt="Door Model 2">
+                        <h3>Panel Door</h3>
+                        <p>Durable and elegant door designs.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+     <!-- Services Section -->
+     <section class="services-section" id="services">
+        <h2>Our Services</h2>
+        <p>
+            At Epiphany Pulse Hub, we offer a range of services to meet your construction and building needs. Our team is committed to providing professional, reliable, and efficient solutions for both individual homeowners and contractors.
+        </p>
+
+        <div class="services-list">
+            <div class="service">
+                <h3>Consultation</h3>
+                <p>We offer expert advice and consultation services to help you choose the best materials for your project.</p>
+            </div>
+            <div class="service">
+                <h3>Delivery Services</h3>
+                <p>Our delivery team ensures timely and safe delivery of your building materials to your doorstep or construction site.</p>
+            </div>
+            <div class="service">
+                <h3>Custom Orders</h3>
+                <p>We handle custom orders for specialized building materials tailored to your specific project needs.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<section class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you! Reach out to us through any of the options below:</p>
+    <ul class="contact-list">
+        <li>
+            <a href="https://www.google.com/maps/place/Your+Kasoa+Dill+St." target="Kasoa Dill St.">
+                <strong>Location:</strong> 1484 Dill St., Kasoa, Ghana
+            </a>
+        </li>
+        <li>
+            <a href="mailto:tettehtiffany.5@gmail.com">
+                <strong>Email:</strong> info@epiphanypulsehub.com
+            </a>
+        </li>
+        <li>
+            <a href="tel:+233 50 722 1315">
+                <strong>Phone:</strong> +233 50 722 1315
+            </a>
+        </li>
+    </ul>
+</section>
+
+<footer>
+        <p>&copy; 2025 Epiphany Pulse Hub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
